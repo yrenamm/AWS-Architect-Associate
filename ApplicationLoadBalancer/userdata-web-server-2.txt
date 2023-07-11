@@ -1,0 +1,6 @@
+#!/bin/bash
+sudo su
+yum install httpd -y
+echo "<html><body><h1><span style="color:#3333FF">Hello from EC2 web instance #2</span></h1><p>This server acts as an Apache nginx server</p></body></html>" > /var/www/html/index.html
+echo "<html><body><h1><span style="color:#3333FF">Serving web interactions from EC2 web instance #2</span></h1><p>This server acts as an Apache nginx server</p></body></html>" > /var/www/html/application.html
+service httpd start

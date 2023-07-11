@@ -1,0 +1,8 @@
+#!/bin/bash
+sudo su
+yum install httpd -y
+cd /var/www/html
+mkdir vid
+echo "<html><body><h1><span style="color:#E51400">Hello from EC2 video server instance #2</span></h1><p>This server acts as an Apache httpd server for video content</p></body></html>" > /var/www/html/vid/index.html
+echo "<html><body><h1><span style="color:#E51400">Serving application data from EC2 application instance #2</span></h1><p>This server acts as an Apache httpd server for video content</p></body></html>" > /var/www/html/vid/video.html
+service httpd start
